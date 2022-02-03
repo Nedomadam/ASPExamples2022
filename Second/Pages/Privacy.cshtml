@@ -1,0 +1,23 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>@Model.Number</p>
+<p>@Model.Text</p>
+<p>
+    @if (Model.Fake) {
+    <span>"Je to Fake"</span> 
+    } else { 
+    <span>"Pravda pravdoucí"</span> 
+    }
+</p>
+<p>@Model.FavoriteUser.Firstname</p>
+<ul>
+@foreach(var u in Model.List)
+{
+    <li>@u.Firstname</li>
+}
+</ul>
