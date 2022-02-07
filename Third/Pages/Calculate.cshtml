@@ -1,0 +1,12 @@
+﻿@page
+@model Third.Pages.CalculateModel
+@{
+}
+@if (String.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p>@Model.NumberA @Model.Operation @Model.NumberB = @Model.Result</p>
+}
+else
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
